@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A07B1965295F471F003641B2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07B1964295F471F003641B2 /* main.swift */; };
+		A07B196D295F48BC003641B2 /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196C295F48BC003641B2 /* SwiftSyntax */; };
+		A07B196F295F48BC003641B2 /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196E295F48BC003641B2 /* SwiftSyntaxParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A06904C6295F4F500027D659 /* RegExp.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RegExp.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A07B1961295F471F003641B2 /* SwiftCommentParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftCommentParser; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07B1964295F471F003641B2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07B196F295F48BC003641B2 /* SwiftSyntaxParser in Frameworks */,
+				A07B196D295F48BC003641B2 /* SwiftSyntax in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,7 @@
 		A07B1958295F471F003641B2 = {
 			isa = PBXGroup;
 			children = (
+				A06904C6295F4F500027D659 /* RegExp.playground */,
 				A07B1963295F471F003641B2 /* SwiftCommentParser */,
 				A07B1962295F471F003641B2 /* Products */,
 			);
@@ -78,6 +84,10 @@
 			dependencies = (
 			);
 			name = SwiftCommentParser;
+			packageProductDependencies = (
+				A07B196C295F48BC003641B2 /* SwiftSyntax */,
+				A07B196E295F48BC003641B2 /* SwiftSyntaxParser */,
+			);
 			productName = SwiftCommentParser;
 			productReference = A07B1961295F471F003641B2 /* SwiftCommentParser */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +116,9 @@
 				Base,
 			);
 			mainGroup = A07B1958295F471F003641B2;
+			packageReferences = (
+				A07B196B295F48BC003641B2 /* XCRemoteSwiftPackageReference "swift-syntax" */,
+			);
 			productRefGroup = A07B1962295F471F003641B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +297,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A07B196B295F48BC003641B2 /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-syntax.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A07B196C295F48BC003641B2 /* SwiftSyntax */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A07B196B295F48BC003641B2 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntax;
+		};
+		A07B196E295F48BC003641B2 /* SwiftSyntaxParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A07B196B295F48BC003641B2 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntaxParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A07B1959295F471F003641B2 /* Project object */;
 }
