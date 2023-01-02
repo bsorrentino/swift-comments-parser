@@ -1,10 +1,18 @@
+//
+//  regexp.swift
+//  SwiftCommentParser
+//
+//  Created by Bartolomeo Sorrentino on 02/01/23.
+//
 
-import Cocoa
+import Foundation
+
+
 import RegexBuilder
 
-// https://uibakery.io/regex-library/url
+// [URL regex that starts with HTTP or HTTPS](https://uibakery.io/regex-library/url)
 // /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/
-let rxurl = Regex {
+let regexUrl = Regex {
     //Anchor.startOfLine
     "http"
     Optionally {
@@ -43,9 +51,7 @@ let rxurl = Regex {
     //Anchor.endOfLine
 }
 
-let test = /([^\[]+)/
-
-let regex = Regex {
+let regexComment = Regex {
     Capture {
         Regex {
             "["
@@ -54,19 +60,9 @@ let regex = Regex {
             ZeroOrMore(.whitespace)
             "("
             Capture {
-                rxurl
+                regexUrl
             }
             ")"
         }
     }
-}
-
-var match = "[hello] (http://www.softphone.eu)".firstMatch(of: regex)
-if let match {
-    print(match.1, match.2)
-    
-}
-match = "[hello] (https://stackoverflow.com/q/53933165/521197)".firstMatch(of: regex)
-if let match {
-    print(match.1, match.2)
 }

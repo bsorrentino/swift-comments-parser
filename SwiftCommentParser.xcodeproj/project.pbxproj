@@ -10,6 +10,8 @@
 		A07B1965295F471F003641B2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07B1964295F471F003641B2 /* main.swift */; };
 		A07B196D295F48BC003641B2 /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196C295F48BC003641B2 /* SwiftSyntax */; };
 		A07B196F295F48BC003641B2 /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196E295F48BC003641B2 /* SwiftSyntaxParser */; };
+		A0C75278296339650069CB6E /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C75277296339650069CB6E /* files.swift */; };
+		A0C7527A296339E70069CB6E /* regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C75279296339E70069CB6E /* regexp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,9 @@
 		A06904C6295F4F500027D659 /* RegExp.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RegExp.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A07B1961295F471F003641B2 /* SwiftCommentParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftCommentParser; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07B1964295F471F003641B2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A0C752762962F9D10069CB6E /* FileManager.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FileManager.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A0C75277296339650069CB6E /* files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
+		A0C75279296339E70069CB6E /* regexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regexp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 		A07B1958295F471F003641B2 = {
 			isa = PBXGroup;
 			children = (
+				A0C752762962F9D10069CB6E /* FileManager.playground */,
 				A06904C6295F4F500027D659 /* RegExp.playground */,
 				A07B1963295F471F003641B2 /* SwiftCommentParser */,
 				A07B1962295F471F003641B2 /* Products */,
@@ -64,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				A07B1964295F471F003641B2 /* main.swift */,
+				A0C75277296339650069CB6E /* files.swift */,
+				A0C75279296339E70069CB6E /* regexp.swift */,
 			);
 			path = SwiftCommentParser;
 			sourceTree = "<group>";
@@ -133,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C7527A296339E70069CB6E /* regexp.swift in Sources */,
 				A07B1965295F471F003641B2 /* main.swift in Sources */,
+				A0C75278296339650069CB6E /* files.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
