@@ -30,19 +30,10 @@ extension CommandVisitor {
     func parseComments( _ trivia: Trivia, prefix: String) {
          for t in trivia {
              switch t {
-             case .lineComment(let comment):
+             case .lineComment(let comment), .docLineComment(let comment):
                  references.insert(comment)
                  break
-             case .blockComment(let comment):
-                 print(comment)
-//                 comment.split(separator: "\n").forEach {
-//                     references.insert(String($0))
-//                 }
-                 break
-             case .docLineComment(let comment):
-                 references.insert(comment)
-                 break
-             case .docBlockComment(let comment):
+             case .blockComment(let comment), .docBlockComment(let comment):
                  references.insert(comment)
                  break
              default:

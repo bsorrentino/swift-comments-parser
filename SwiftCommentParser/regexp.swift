@@ -51,11 +51,12 @@ let regexUrl = Regex {
     //Anchor.endOfLine
 }
 
+let anyExceptOpenSquareBracket = CharacterClass.anyOf("[").inverted
 let regexComment = Regex {
     Capture {
         Regex {
             "["
-            OneOrMore(.any)
+            OneOrMore(anyExceptOpenSquareBracket)
             "]"
             ZeroOrMore(.whitespace)
             "("
@@ -66,3 +67,4 @@ let regexComment = Regex {
         }
     }
 }
+

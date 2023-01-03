@@ -2,7 +2,7 @@
 import Cocoa
 import RegexBuilder
 
-// https://uibakery.io/regex-library/url
+// [URL regex that starts with HTTP or HTTPS](https://uibakery.io/regex-library/url)
 // /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/
 let rxurl = Regex {
     //Anchor.startOfLine
@@ -43,8 +43,6 @@ let rxurl = Regex {
     //Anchor.endOfLine
 }
 
-let test = /([^\[]+)/
-
 let regex = Regex {
     Capture {
         Regex {
@@ -69,4 +67,34 @@ if let match {
 match = "[hello] (https://stackoverflow.com/q/53933165/521197)".firstMatch(of: regex)
 if let match {
     print(match.1, match.2)
+}
+match = "[12345] bla bla bla  [hello] (https://stackoverflow.com/q/53933165/521197)".firstMatch(of: regex)
+if let match {
+    print(match.1, match.2)
+}
+
+
+// let test01 = /(\[[^\[]+\]\s*\(.+\))/
+
+let anyExceptOpenSquareBracket = CharacterClass.anyOf("[").inverted
+
+let test01 = Regex {
+    Capture {
+        Regex {
+            "["
+            OneOrMore(anyExceptOpenSquareBracket)
+            "]"
+            ZeroOrMore(.whitespace)
+            "("
+            Capture {
+                rxurl
+            }
+            ")"
+        }
+    }
+}
+
+let match01 = "[12345] bla bla bla  [hello] (https://stackoverflow.com/q/53933165/521197)".firstMatch(of: test01)
+if let match01 {
+    print(match01.1)
 }
