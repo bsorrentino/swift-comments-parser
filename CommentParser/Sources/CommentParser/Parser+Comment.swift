@@ -3,7 +3,7 @@ import Combine
 import SwiftSyntax
 import SwiftSyntaxParser
 
-final class CommandVisitor: SyntaxVisitor {
+final class CommandVisitor: SyntaxVisitor, ObservableObject {
 
     private(set) var references = Set<String>()
     
@@ -19,15 +19,17 @@ final class CommandVisitor: SyntaxVisitor {
 }
 
 extension CommandVisitor {
-    
+        
     func parseComments( _ trivia: Trivia, prefix: String) {
          for t in trivia {
              switch t {
-             case .lineComment(let comment), .docLineComment(let comment):
-                 references.insert(comment)
-                 break
-             case .blockComment(let comment), .docBlockComment(let comment):
-                 references.insert(comment)
+             case   .lineComment(let comment),
+                     .docLineComment(let comment),
+                     .blockComment(let comment),
+                     .docBlockComment(let comment):
+                 if let match = comment.firstMatch(of: regexComment ) {
+                     references.insert(String(match.1))
+                 }
                  break
              default:
                  break
@@ -37,7 +39,7 @@ extension CommandVisitor {
 }
 
 
-public func parseComment( at path: URL? ) async -> [String] {
+public func parseComment( at path: URL?  ) async -> Set<String> {
     guard let path else { return [] }
     
     let options: FileManager.DirectoryEnumerationOptions = [.skipsHiddenFiles, .skipsPackageDescendants]
@@ -57,16 +59,8 @@ public func parseComment( at path: URL? ) async -> [String] {
             print( "ERROR: \(error)")
         }
     }
-            
-    let refs =
-        visitor.references
-            .reduce( into: [String: String]() ) { (dict, item ) in
-                if let match = item.firstMatch(of: regexComment ) {
-                    dict[ String(match.2)] = String(match.1)
-                }
-            }
-    
-    return refs.map { $0.value }
+       
+    return visitor.references
 }
 
 

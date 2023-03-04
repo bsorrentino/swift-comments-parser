@@ -25,7 +25,8 @@ let package = Package(
         .target(
             name: "CommentParser",
             dependencies: [
-                .product(name: "SwiftSyntax", package: "swift-syntax")
+                .product(name: "SwiftSyntax", package: "swift-syntax"),
+                .product(name: "SwiftSyntaxParser", package: "swift-syntax")
             ]),
         .testTarget(
             name: "CommentParserTests",

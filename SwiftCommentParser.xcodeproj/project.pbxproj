@@ -11,6 +11,11 @@
 		A07B196D295F48BC003641B2 /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196C295F48BC003641B2 /* SwiftSyntax */; };
 		A07B196F295F48BC003641B2 /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196E295F48BC003641B2 /* SwiftSyntaxParser */; };
 		A0CBDC6529B37F5500394251 /* CommentParser in Frameworks */ = {isa = PBXBuildFile; productRef = A0CBDC6429B37F5500394251 /* CommentParser */; };
+		A0D507BA29B3CD6200FEE89E /* CommentParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D507B929B3CD6200FEE89E /* CommentParserApp.swift */; };
+		A0D507BC29B3CD6200FEE89E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D507BB29B3CD6200FEE89E /* ContentView.swift */; };
+		A0D507BE29B3CD6300FEE89E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D507BD29B3CD6300FEE89E /* Assets.xcassets */; };
+		A0D507C129B3CD6300FEE89E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D507C029B3CD6300FEE89E /* Preview Assets.xcassets */; };
+		A0D507C729B3CE2500FEE89E /* CommentParser in Frameworks */ = {isa = PBXBuildFile; productRef = A0D507C629B3CE2500FEE89E /* CommentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +37,12 @@
 		A07B1964295F471F003641B2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A0C752762962F9D10069CB6E /* FileManager.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FileManager.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A0CBDC6229B37D5F00394251 /* CommentParser */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommentParser; sourceTree = "<group>"; };
+		A0D507B729B3CD6200FEE89E /* CommentParserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentParserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D507B929B3CD6200FEE89E /* CommentParserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentParserApp.swift; sourceTree = "<group>"; };
+		A0D507BB29B3CD6200FEE89E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A0D507BD29B3CD6300FEE89E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0D507C029B3CD6300FEE89E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0D507C229B3CD6300FEE89E /* CommentParserApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommentParserApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +53,14 @@
 				A07B196F295F48BC003641B2 /* SwiftSyntaxParser in Frameworks */,
 				A0CBDC6529B37F5500394251 /* CommentParser in Frameworks */,
 				A07B196D295F48BC003641B2 /* SwiftSyntax in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D507B429B3CD6200FEE89E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D507C729B3CE2500FEE89E /* CommentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +75,7 @@
 				A0C752762962F9D10069CB6E /* FileManager.playground */,
 				A0CBDC6229B37D5F00394251 /* CommentParser */,
 				A07B1963295F471F003641B2 /* SwiftCommentParser */,
+				A0D507B829B3CD6200FEE89E /* CommentParserApp */,
 				A07B1962295F471F003641B2 /* Products */,
 				A0CBDC6329B37F5500394251 /* Frameworks */,
 			);
@@ -65,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A07B1961295F471F003641B2 /* SwiftCommentParser */,
+				A0D507B729B3CD6200FEE89E /* CommentParserApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +103,26 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0D507B829B3CD6200FEE89E /* CommentParserApp */ = {
+			isa = PBXGroup;
+			children = (
+				A0D507B929B3CD6200FEE89E /* CommentParserApp.swift */,
+				A0D507BB29B3CD6200FEE89E /* ContentView.swift */,
+				A0D507BD29B3CD6300FEE89E /* Assets.xcassets */,
+				A0D507C229B3CD6300FEE89E /* CommentParserApp.entitlements */,
+				A0D507BF29B3CD6300FEE89E /* Preview Content */,
+			);
+			path = CommentParserApp;
+			sourceTree = "<group>";
+		};
+		A0D507BF29B3CD6300FEE89E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A0D507C029B3CD6300FEE89E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +150,26 @@
 			productReference = A07B1961295F471F003641B2 /* SwiftCommentParser */;
 			productType = "com.apple.product-type.tool";
 		};
+		A0D507B629B3CD6200FEE89E /* CommentParserApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0D507C529B3CD6300FEE89E /* Build configuration list for PBXNativeTarget "CommentParserApp" */;
+			buildPhases = (
+				A0D507B329B3CD6200FEE89E /* Sources */,
+				A0D507B429B3CD6200FEE89E /* Frameworks */,
+				A0D507B529B3CD6200FEE89E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommentParserApp;
+			packageProductDependencies = (
+				A0D507C629B3CE2500FEE89E /* CommentParser */,
+			);
+			productName = CommentParserApp;
+			productReference = A0D507B729B3CD6200FEE89E /* CommentParserApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -120,6 +181,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					A07B1960295F471F003641B2 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					A0D507B629B3CD6200FEE89E = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -141,9 +205,22 @@
 			projectRoot = "";
 			targets = (
 				A07B1960295F471F003641B2 /* SwiftCommentParser */,
+				A0D507B629B3CD6200FEE89E /* CommentParserApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0D507B529B3CD6200FEE89E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D507C129B3CD6300FEE89E /* Preview Assets.xcassets in Resources */,
+				A0D507BE29B3CD6300FEE89E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A07B195D295F471F003641B2 /* Sources */ = {
@@ -151,6 +228,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07B1965295F471F003641B2 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D507B329B3CD6200FEE89E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D507BC29B3CD6200FEE89E /* ContentView.swift in Sources */,
+				A0D507BA29B3CD6200FEE89E /* CommentParserApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +378,60 @@
 			};
 			name = Release;
 		};
+		A0D507C329B3CD6300FEE89E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommentParserApp/CommentParserApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommentParserApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 48J595L9BX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.CommentParserApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A0D507C429B3CD6300FEE89E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommentParserApp/CommentParserApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommentParserApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 48J595L9BX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.CommentParserApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -309,6 +449,15 @@
 			buildConfigurations = (
 				A07B1969295F471F003641B2 /* Debug */,
 				A07B196A295F471F003641B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0D507C529B3CD6300FEE89E /* Build configuration list for PBXNativeTarget "CommentParserApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D507C329B3CD6300FEE89E /* Debug */,
+				A0D507C429B3CD6300FEE89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -338,6 +487,10 @@
 			productName = SwiftSyntaxParser;
 		};
 		A0CBDC6429B37F5500394251 /* CommentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommentParser;
+		};
+		A0D507C629B3CE2500FEE89E /* CommentParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CommentParser;
 		};
