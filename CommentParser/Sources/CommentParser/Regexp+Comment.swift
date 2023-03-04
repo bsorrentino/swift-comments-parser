@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-
 import RegexBuilder
 
 // [URL regex that starts with HTTP or HTTPS](https://uibakery.io/regex-library/url)
@@ -50,6 +48,7 @@ let regexUrl = Regex {
     }
     //Anchor.endOfLine
 }
+
 
 let anyExceptOpenSquareBracket = CharacterClass.anyOf("[").inverted
 let regexComment = Regex {
