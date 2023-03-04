@@ -50,9 +50,9 @@
 		A07B1958295F471F003641B2 = {
 			isa = PBXGroup;
 			children = (
-				A0CBDC6229B37D5F00394251 /* CommentParser */,
-				A0C752762962F9D10069CB6E /* FileManager.playground */,
 				A06904C6295F4F500027D659 /* RegExp.playground */,
+				A0C752762962F9D10069CB6E /* FileManager.playground */,
+				A0CBDC6229B37D5F00394251 /* CommentParser */,
 				A07B1963295F471F003641B2 /* SwiftCommentParser */,
 				A07B1962295F471F003641B2 /* Products */,
 				A0CBDC6329B37F5500394251 /* Frameworks */,

@@ -16,10 +16,6 @@ let args = CommandLine.arguments.dropFirst()
 let _ = await withTaskGroup( of: Void.self ) { group in
     for arg in args {
         
-//        let currentPath = URL( string: "/Users/bsorrentino/WORKSPACES/GITHUB.me/AppleOS/" )
-//
-//        let path = URL( string: "PlantUML4iPad", relativeTo: currentPath )
-
         let path = URL( string: NSString(string: arg).expandingTildeInPath )
         group.addTask {
             
