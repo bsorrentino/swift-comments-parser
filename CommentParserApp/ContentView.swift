@@ -57,7 +57,7 @@ struct ContentView: View {
             }
             else {
                 List( comments, id: \.self ) { comment in
-                    Text( comment )
+                    Text( "* \(comment)" )
                         .font(.system(size: 12))
                         .monospaced()
                         .padding(0)
