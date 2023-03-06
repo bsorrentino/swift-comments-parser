@@ -42,6 +42,10 @@ struct ContentView: View {
 
     }
     
+    private var isParsing:Bool {
+        progressMessage != nil
+    }
+    
     var body: some View {
         VStack {
             Text( fileUrl?.relativeString ?? "" )
@@ -61,8 +65,19 @@ struct ContentView: View {
             }
             Divider()
             HStack {
-                Button("select Project Folder") {
-                    openFolderChoosePanel()
+                if !isParsing {
+                    Button( action: {
+                        openFolderChoosePanel()
+                    },
+                            label: {
+                        Label("select project folder", systemImage: "")
+                            .labelStyle(.titleOnly)
+                            .padding( 10 )
+                    })
+                    .buttonStyle(ScaleButtonStyle())
+                }
+                if !comments.isEmpty {
+                    CopyToClipboardButton( value: comments.joined( separator: "\n") )
                 }
             }
         }

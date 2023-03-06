@@ -10,6 +10,8 @@
 		A07B1965295F471F003641B2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07B1964295F471F003641B2 /* main.swift */; };
 		A07B196D295F48BC003641B2 /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196C295F48BC003641B2 /* SwiftSyntax */; };
 		A07B196F295F48BC003641B2 /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196E295F48BC003641B2 /* SwiftSyntaxParser */; };
+		A0B2094229B6062F002598F9 /* CopyToClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2094129B6062F002598F9 /* CopyToClipboard.swift */; };
+		A0B2094429B60E41002598F9 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2094329B60E41002598F9 /* ButtonStyle.swift */; };
 		A0CBDC6529B37F5500394251 /* CommentParser in Frameworks */ = {isa = PBXBuildFile; productRef = A0CBDC6429B37F5500394251 /* CommentParser */; };
 		A0D507BA29B3CD6200FEE89E /* CommentParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D507B929B3CD6200FEE89E /* CommentParserApp.swift */; };
 		A0D507BC29B3CD6200FEE89E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D507BB29B3CD6200FEE89E /* ContentView.swift */; };
@@ -35,6 +37,8 @@
 		A06904C6295F4F500027D659 /* RegExp.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RegExp.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A07B1961295F471F003641B2 /* CommentParserCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommentParserCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07B1964295F471F003641B2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A0B2094129B6062F002598F9 /* CopyToClipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboard.swift; sourceTree = "<group>"; };
+		A0B2094329B60E41002598F9 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		A0C752762962F9D10069CB6E /* FileManager.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FileManager.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A0CBDC6229B37D5F00394251 /* CommentParser */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommentParser; sourceTree = "<group>"; };
 		A0D507B729B3CD6200FEE89E /* CommentParserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentParserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				A0D507B929B3CD6200FEE89E /* CommentParserApp.swift */,
+				A0B2094329B60E41002598F9 /* ButtonStyle.swift */,
+				A0B2094129B6062F002598F9 /* CopyToClipboard.swift */,
 				A0D507BB29B3CD6200FEE89E /* ContentView.swift */,
 				A0D507BD29B3CD6300FEE89E /* Assets.xcassets */,
 				A0D507C229B3CD6300FEE89E /* CommentParserApp.entitlements */,
@@ -236,7 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D507BC29B3CD6200FEE89E /* ContentView.swift in Sources */,
+				A0B2094429B60E41002598F9 /* ButtonStyle.swift in Sources */,
 				A0D507BA29B3CD6200FEE89E /* CommentParserApp.swift in Sources */,
+				A0B2094229B6062F002598F9 /* CopyToClipboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
