@@ -33,7 +33,7 @@
 /* Begin PBXFileReference section */
 		A02B701729B390C90095F369 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A06904C6295F4F500027D659 /* RegExp.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RegExp.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A07B1961295F471F003641B2 /* SwiftCommentParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftCommentParser; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07B1961295F471F003641B2 /* CommentParserCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommentParserCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07B1964295F471F003641B2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A0C752762962F9D10069CB6E /* FileManager.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FileManager.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A0CBDC6229B37D5F00394251 /* CommentParser */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommentParser; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				A06904C6295F4F500027D659 /* RegExp.playground */,
 				A0C752762962F9D10069CB6E /* FileManager.playground */,
 				A0CBDC6229B37D5F00394251 /* CommentParser */,
-				A07B1963295F471F003641B2 /* SwiftCommentParser */,
+				A07B1963295F471F003641B2 /* CommentParserCLI */,
 				A0D507B829B3CD6200FEE89E /* CommentParserApp */,
 				A07B1962295F471F003641B2 /* Products */,
 				A0CBDC6329B37F5500394251 /* Frameworks */,
@@ -84,18 +84,18 @@
 		A07B1962295F471F003641B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A07B1961295F471F003641B2 /* SwiftCommentParser */,
+				A07B1961295F471F003641B2 /* CommentParserCLI */,
 				A0D507B729B3CD6200FEE89E /* CommentParserApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A07B1963295F471F003641B2 /* SwiftCommentParser */ = {
+		A07B1963295F471F003641B2 /* CommentParserCLI */ = {
 			isa = PBXGroup;
 			children = (
 				A07B1964295F471F003641B2 /* main.swift */,
 			);
-			path = SwiftCommentParser;
+			path = CommentParserCLI;
 			sourceTree = "<group>";
 		};
 		A0CBDC6329B37F5500394251 /* Frameworks */ = {
@@ -128,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A07B1960295F471F003641B2 /* SwiftCommentParser */ = {
+		A07B1960295F471F003641B2 /* CommentParserCLI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A07B1968295F471F003641B2 /* Build configuration list for PBXNativeTarget "SwiftCommentParser" */;
+			buildConfigurationList = A07B1968295F471F003641B2 /* Build configuration list for PBXNativeTarget "CommentParserCLI" */;
 			buildPhases = (
 				A07B195D295F471F003641B2 /* Sources */,
 				A07B195E295F471F003641B2 /* Frameworks */,
@@ -140,14 +140,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftCommentParser;
+			name = CommentParserCLI;
 			packageProductDependencies = (
 				A07B196C295F48BC003641B2 /* SwiftSyntax */,
 				A07B196E295F48BC003641B2 /* SwiftSyntaxParser */,
 				A0CBDC6429B37F5500394251 /* CommentParser */,
 			);
 			productName = SwiftCommentParser;
-			productReference = A07B1961295F471F003641B2 /* SwiftCommentParser */;
+			productReference = A07B1961295F471F003641B2 /* CommentParserCLI */;
 			productType = "com.apple.product-type.tool";
 		};
 		A0D507B629B3CD6200FEE89E /* CommentParserApp */ = {
@@ -204,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A07B1960295F471F003641B2 /* SwiftCommentParser */,
+				A07B1960295F471F003641B2 /* CommentParserCLI */,
 				A0D507B629B3CD6200FEE89E /* CommentParserApp */,
 			);
 		};
@@ -444,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A07B1968295F471F003641B2 /* Build configuration list for PBXNativeTarget "SwiftCommentParser" */ = {
+		A07B1968295F471F003641B2 /* Build configuration list for PBXNativeTarget "CommentParserCLI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A07B1969295F471F003641B2 /* Debug */,
