@@ -10,8 +10,10 @@
 		A07B1965295F471F003641B2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07B1964295F471F003641B2 /* main.swift */; };
 		A07B196D295F48BC003641B2 /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196C295F48BC003641B2 /* SwiftSyntax */; };
 		A07B196F295F48BC003641B2 /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = A07B196E295F48BC003641B2 /* SwiftSyntaxParser */; };
+		A0AFD1D329B63CB50075667F /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = A0AFD1D229B63CB50075667F /* SwiftSyntax */; };
 		A0B2094229B6062F002598F9 /* CopyToClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2094129B6062F002598F9 /* CopyToClipboard.swift */; };
 		A0B2094429B60E41002598F9 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2094329B60E41002598F9 /* ButtonStyle.swift */; };
+		A0B2094829B63C4B002598F9 /* SwiftSyntaxParser in Frameworks */ = {isa = PBXBuildFile; productRef = A0B2094729B63C4B002598F9 /* SwiftSyntaxParser */; };
 		A0CBDC6529B37F5500394251 /* CommentParser in Frameworks */ = {isa = PBXBuildFile; productRef = A0CBDC6429B37F5500394251 /* CommentParser */; };
 		A0D507BA29B3CD6200FEE89E /* CommentParserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D507B929B3CD6200FEE89E /* CommentParserApp.swift */; };
 		A0D507BC29B3CD6200FEE89E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D507BB29B3CD6200FEE89E /* ContentView.swift */; };
@@ -64,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B2094829B63C4B002598F9 /* SwiftSyntaxParser in Frameworks */,
+				A0AFD1D329B63CB50075667F /* SwiftSyntax in Frameworks */,
 				A0D507C729B3CE2500FEE89E /* CommentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +175,8 @@
 			name = CommentParserApp;
 			packageProductDependencies = (
 				A0D507C629B3CE2500FEE89E /* CommentParser */,
+				A0B2094729B63C4B002598F9 /* SwiftSyntaxParser */,
+				A0AFD1D229B63CB50075667F /* SwiftSyntax */,
 			);
 			productName = CommentParserApp;
 			productReference = A0D507B729B3CD6200FEE89E /* CommentParserApp.app */;
@@ -490,6 +496,16 @@
 			productName = SwiftSyntax;
 		};
 		A07B196E295F48BC003641B2 /* SwiftSyntaxParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A07B196B295F48BC003641B2 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntaxParser;
+		};
+		A0AFD1D229B63CB50075667F /* SwiftSyntax */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A07B196B295F48BC003641B2 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntax;
+		};
+		A0B2094729B63C4B002598F9 /* SwiftSyntaxParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A07B196B295F48BC003641B2 /* XCRemoteSwiftPackageReference "swift-syntax" */;
 			productName = SwiftSyntaxParser;
