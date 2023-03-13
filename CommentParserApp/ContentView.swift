@@ -33,7 +33,7 @@ struct ContentView: View {
             Task {
                 let result = await parseComment(at: self.fileUrl  )
                 
-                comments = result.map( { $0 } )
+                comments = result.map( { "* \($0)" } )
                 
                 progressMessage = nil
 
@@ -57,7 +57,7 @@ struct ContentView: View {
             }
             else {
                 List( comments, id: \.self ) { comment in
-                    Text( "* \(comment)" )
+                    Text( comment )
                         .font(.system(size: 12))
                         .monospaced()
                         .padding(0)

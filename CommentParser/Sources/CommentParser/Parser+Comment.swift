@@ -15,6 +15,7 @@ final class CommandVisitor: SyntaxVisitor, ObservableObject {
     override func visitPost(_ node: TokenSyntax) {
         parseComments( node.leadingTrivia, prefix: "leading" )
         parseComments( node.trailingTrivia, prefix: "trailing" )
+        
     }
 }
 
