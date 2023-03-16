@@ -28,18 +28,25 @@ struct ContentView: View {
         if panel.runModal() == .OK {
             self.fileUrl = panel.url
            
-            progressMessage = "parsing ..."
-            
-            Task {
-                let result = await parseComment(at: self.fileUrl  )
-                
-                comments = result.map( { "* \($0)" } )
-                
-                progressMessage = nil
-
-            }
+            processComments()
         }
 
+    }
+    
+    private func processComments() {
+        guard let fileUrl else { return }
+        
+        progressMessage = "parsing ..."
+        
+        Task {
+            let result = await parseComment(at: fileUrl  )
+            
+            comments = result.map( { "* \($0)" } )
+            
+            progressMessage = nil
+
+        }
+        
     }
     
     private var isParsing:Bool {
@@ -78,6 +85,17 @@ struct ContentView: View {
                 }
                 if !comments.isEmpty {
                     CopyToClipboardButton( value: comments.joined( separator: "\n") )
+                }
+                if fileUrl != nil && progressMessage == nil {
+                    Button( action: {
+                        processComments()
+                    },
+                    label: {
+                        Label("process again", systemImage: "")
+                            .labelStyle(.titleOnly)
+                            .padding( 10 )
+                    })
+                    .buttonStyle(ScaleButtonStyle())
                 }
             }
         }
