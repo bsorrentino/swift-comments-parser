@@ -1,9 +1,11 @@
 //
-//  regexp.swift
+//  Regexp+Comment.swift
 //  SwiftCommentParser
 //
 //  Created by Bartolomeo Sorrentino on 02/01/23.
 //
+// [Regular expressions Available from Swift 5.7](https://www.hackingwithswift.com/swift/5.7/regexes)
+// [Getting started with RegexBuilder on Swift](https://blog.logrocket.com/getting-started-regexbuilder-swift/)
 
 import Foundation
 import RegexBuilder

@@ -1,3 +1,13 @@
+//
+//  Parser+Comment.swift
+//  SwiftCommentParser
+//
+//  Created by Bartolomeo Sorrentino on 02/01/23.
+//
+//
+// [An overview of SwiftSyntax](https://medium.com/@lucianoalmeida1/an-overview-of-swiftsyntax-cf1ae6d53494)
+
+
 import Foundation
 import Combine
 import SwiftSyntax

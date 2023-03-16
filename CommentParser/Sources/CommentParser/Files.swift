@@ -4,6 +4,7 @@
 //
 //  Created by Bartolomeo Sorrentino on 02/01/23.
 //
+// [Async sequences, streams, and Combine](https://www.swiftbysundell.com/articles/async-sequences-streams-and-combine/)
 
 import Foundation
 import Combine
